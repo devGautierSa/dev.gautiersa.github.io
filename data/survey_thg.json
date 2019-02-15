@@ -1,0 +1,1 @@
+{"locale":"fr","pages":[{"name":"page1","elements":[{"type":"text","name":"q1"},{"type":"sortablelist","name":"question1","choices":["Item 1","Item 2","Item 3"],"colCount":"2"}]}],"showPageNumbers":"true","showProgressBar":"top"}

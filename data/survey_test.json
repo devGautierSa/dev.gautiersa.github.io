@@ -1,0 +1,1 @@
+{"pages":[{"name":"page1","elements":[{"type":"text","name":"question1"},{"type":"dropdown","name":"company_email","title":"Contact société","choices":["item1","item2","item3"],"choicesByUrl":{"url":"http://s41263vw:3040/tools/example/demo_adresses.json","valueName":"email","titleName":"company"}},{"type":"checkbox","name":"question2","choices":["item1","item2","item3"]}]}]}

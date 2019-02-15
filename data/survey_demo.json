@@ -1,0 +1,197 @@
+{
+    "locale": "fr",
+    "title": "Demo Surveyjs",
+    "completedHtml": {
+        "fr": "<h1>Votre demande est bien prise en compte.</h1>"
+    },
+    "loadingHtml": {
+        "fr": "Chargement en cours. Veuillez patienter."
+    },
+    "pages": [{
+            "name": "page1",
+            "elements": [{
+                    "type": "html",
+                    "name": "question1",
+                    "html": {
+                        "fr": "<img class='media-object full' src='libs/batiment.jpg'/>"
+                    }
+                },
+                {
+                    "type": "text",
+                    "name": "name",
+                    "title": {
+                        "fr": "Votre Nom",
+                        "default": "Please enter your name:"
+                    },
+                    "isRequired": true,
+                    "placeHolder": {
+                        "fr": "NOM",
+                        "default": "Jon Snow"
+                    }
+                },
+                {
+                    "type": "text",
+                    "name": "question2",
+                    "visibleIf": "{name} notempty",
+                    "startWithNewLine": false,
+                    "title": {
+                        "fr": "Votre prénom"
+                    }
+                },
+                {
+                    "type": "text",
+                    "name": "birthdate",
+                    "visibleIf": "{name} notempty",
+                    "title": {
+                        "fr": "Vous êtes né le",
+                        "default": "Your birthdate:"
+                    },
+                    "isRequired": true,
+                    "inputType": "date"
+                },
+                {
+                    "type": "text",
+                    "name": "email",
+                    "visibleIf": "{name} notempty",
+                    "title": {
+                        "fr": "Votre Email",
+                        "default": "Your e-mail:"
+                    },
+                    "isRequired": true,
+                    "validators": [{
+                        "type": "email"
+                    }],
+                    "inputType": "email",
+                    "placeHolder": "jon.snow@nightwatch.org"
+                }
+            ],
+            "title": {
+                "fr": "Votre identité"
+            }
+        },
+        {
+            "name": "page2",
+            "elements": [{
+                    "type": "checkbox",
+                    "name": "question-activite",
+                    "title": {
+                        "fr": "Quelle est votre activité principales"
+                    },
+                    "isRequired": true,
+                    "hasOther": true,
+                    "choices": [{
+                            "value": "C01",
+                            "text": {
+                                "fr": "Peintre"
+                            }
+                        },
+                        {
+                            "value": "C02",
+                            "text": {
+                                "fr": "Maçon"
+                            }
+                        },
+                        {
+                            "value": "C03",
+                            "text": {
+                                "fr": "Charpente"
+                            }
+                        },
+                        {
+                            "value": "C04",
+                            "text": {
+                                "fr": "Electricité"
+                            }
+                        }
+                    ],
+                    "colCount": 2
+                },
+                {
+                    "type": "rating",
+                    "name": "question_anciennete",
+                    "title": {
+                        "fr": "Depuis combien de temps exercez-vous ces activités"
+                    },
+                    "rateValues": [{
+                            "value": "5",
+                            "text": {
+                                "fr": "moins de 5 ans"
+                            }
+                        },
+                        {
+                            "value": "10",
+                            "text": {
+                                "fr": "entre 5 et 10 ans"
+                            }
+                        },
+                        {
+                            "value": "99",
+                            "text": {
+                                "fr": "plus de 11 ans"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "comment",
+                    "name": "question_commentaires",
+                    "title": {
+                        "fr": "Décrivez votre besoin"
+                    }
+                }
+            ],
+            "title": {
+                "fr": "Vos activités"
+            }
+        },
+        {
+            "name": "page3",
+            "elements": [{
+                    "type": "radiogroup",
+                    "name": "question_pref",
+                    "title": {
+                        "fr": "Quel est votre préférence "
+                    },
+                    "hasOther": true,
+                    "choices": [{
+                            "value": "tel",
+                            "text": {
+                                "fr": "Téléphone"
+                            }
+                        },
+                        {
+                            "value": "email",
+                            "text": {
+                                "fr": "Email"
+                            }
+                        },
+                        {
+                            "value": "lettre",
+                            "text": {
+                                "fr": "Courrier"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "name": "question3",
+                    "visibleIf": "{question_pref} = \"tel\"",
+                    "title": {
+                        "fr": "Votre téléphone"
+                    },
+                    "inputType": "tel"
+                }
+            ],
+            "title": {
+                "fr": "Dites-nous comment vous contacter ?"
+            }
+        }
+    ],
+    "sendResultOnPageNext": true,
+    "showPageNumbers": true,
+    "showQuestionNumbers": "off",
+    "questionTitleLocation": "left",
+    "showProgressBar": "top",
+    "showTimerPanel": "bottom"
+}
